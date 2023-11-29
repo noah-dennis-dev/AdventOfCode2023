@@ -11,7 +11,7 @@ class InputController {
             const { session } = JSON.parse(fs.readFileSync(`./session.json`).toString());
 
             if (!fs.existsSync(`./inputs/day-${this.day}.txt`)) {
-                const response = await fetch(`https://adventofcode.com/2022/day/${this.day}/input`, {
+                const response = await fetch(`https://adventofcode.com/2023/day/${this.day}/input`, {
                     headers: {
                         Cookie: `session=${session};`
                     }
