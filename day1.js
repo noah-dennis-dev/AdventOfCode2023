@@ -1,28 +1,32 @@
-const { InputController, TwoDimentionalCoords, sumArray, countOccurrences } = require('./functions.js');
+const { TwoDimensionalCoords, sumArray, countOccurrences } = require('./functions.js');
+const { Graph, Stack, Queue, PriorityQueue } = require('./helpers/data-structures.js');
+const { InputController } = require('./helpers/inputs.js');
 
 (async () => {
     const DAY = 1;
-    const input = new InputController(DAY);
+    const testInput = ``;
+    const input = new InputController(DAY, testInput);
     await input.getInput();
-    const data = input.split('\n', false);
     let rawData = input.data;
+    let data = input.split('\n', true);
 
     let total = 0;
+
 
     for (let item of data) {
 
     }
 
-    for (let i = 0; i < data.length; i++) {
-        const currentItem = data[i];
-        const previousItem = data[i - 1];
-        const nextItem = data[i + 1];
 
 
-    }
-
-
-
-
-    console.log(total)
+    console.log(total);
 })();
+
+
+/*regexMatches('[123] [ABC] [HELLO] [TESTING]')
+function regexMatches(input) {
+    const pattern = /\[(.*?)\]/g;
+    const matches = [...input.matchAll(pattern)].map(match => match[1]);
+
+    console.log(matches);
+}*/
