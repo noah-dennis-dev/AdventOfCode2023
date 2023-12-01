@@ -5,7 +5,7 @@ I am using some prewritten code such as pulling the input from the input endpoin
 ## Days
 | **Day** | **Difficulty** | **Notes** |
 |:---:|:---:|:---:|
-| [1](day1.js) | ⚫ | - |
+| [1](day1.js) | 🟡 | Part 1 was quite easy being able to simply filter to get only numerical values. Part 2 was much harder mainly due to misunderstanding the questions. I believed that the string "eighthree" would only give 8 as the "t" would be removed. Managed to do it in the end by replacing in the format "two" -> "two2two". |
 | [2](day2.js) | ⚫ | - |
 | [3](day3.js) | ⚫ | - |
 | [4](day4.js) | ⚫ | - |
