@@ -47,12 +47,16 @@ class InputController {
         return output;
     }
 
-    splitTwice(delimeter1, delimeter2, isInt = false) {
+    splitTwice(delimeter1, delimeter2, isInt = false, removeEmptySpaces = false) {
         let output = [];
 
         for (let items of this.data.split(delimeter1)) {
             let itemsArr = [];
             for (let item of items.split(delimeter2)) {
+                if (removeEmptySpaces && item == '') {
+                    continue;
+                }
+
                 if (isInt) {
                     itemsArr.push(parseInt(item));
                 } else {
