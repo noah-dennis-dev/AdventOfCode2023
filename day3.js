@@ -71,14 +71,12 @@ function partTwo(data) {
             numbers.push({ start: match.index, end: pattern.lastIndex - 1, number: match[0] })
         }
 
-        if (numbers != null) {
-            for (let number of numbers) {
-                for (let y = lineIndex - 1; y <= lineIndex + 1; y++) {
-                    for (let x = number.start - 1; x <= number.end + 1; x++) {
-                        if (y >= 0 && y < data.length && x >= 0 && x < data[lineIndex].length) {
-                            if (data[y][x] == '*') {
-                                map.push({ x, y, number: parseInt(number.number) });
-                            }
+        for (let number of numbers) {
+            for (let y = lineIndex - 1; y <= lineIndex + 1; y++) {
+                for (let x = number.start - 1; x <= number.end + 1; x++) {
+                    if (y >= 0 && y < data.length && x >= 0 && x < data[lineIndex].length) {
+                        if (data[y][x] == '*') {
+                            map.push({ x, y, number: parseInt(number.number) });
                         }
                     }
                 }

@@ -9,7 +9,7 @@ I am using some prewritten code such as pulling the input from the input endpoin
 | [2](day2.js) | 🟢 | Very good day. A bit of input parsing to do but managed it with ease. Just a bit annoyed I didn't do it quicker but apart from that it was great! |
 | [3](day3.js) | 🟡 | Fairly easy for the most part but messed up on the numbers RegEx which slowed me down a ton and I didn't realise this part was the issue for a while. |
 | [4](day4.js) | 🟢 | Fairly easy day again. I wasn't able to do it as fast as I would have liked, I needed to debug a few things such as keys with excess whitespace but overall a fairly problem free puzzle! |
-| [5](day5.js) | ⚫ | - |
+| [5](day5.js) | 🟠 | Very interesting but hard problems. Obviously with such large numbers it had to be approached differently to how I would first attempt but it worked out in the end! |
 | [6](day6.js) | ⚫ | - |
 | [7](day7.js) | ⚫ | - |
 | [8](day8.js) | ⚫ | - |
