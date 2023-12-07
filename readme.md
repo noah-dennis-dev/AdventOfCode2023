@@ -11,7 +11,7 @@ I am using some prewritten code such as pulling the input from the input endpoin
 | [4](day4.js) | 🟢 | Fairly easy day again. I wasn't able to do it as fast as I would have liked, I needed to debug a few things such as keys with excess whitespace but overall a fairly problem free puzzle! |
 | [5](day5.js) | 🟠 | Very interesting but hard problems. Obviously with such large numbers it had to be approached differently to how I would first attempt but it worked out in the end! |
 | [6](day6.js) | 🟢 | Much, much, much nicer than previous days. Still did it a bit slow as I expected more issues (things I hadn't considered) to be honest. |
-| [7](day7.js) | ⚫ | - |
+| [7](day7.js) | 🟡 | Fairly nice problem today but just took a while as there were many rules. |
 | [8](day8.js) | ⚫ | - |
 | [9](day9.js) | ⚫ | - |
 | [10](day10.js) | ⚫ | - |
