@@ -171,4 +171,42 @@ class PriorityQueue extends Queue {
 }
 
 
-module.exports = { Graph, Stack, Queue, PriorityQueue }
+class Grid {
+    constructor(height, width, items = []) {
+        this.grid;
+
+        if (items != []) {
+            this.grid = items;
+        } else {
+            for (let y = 0; y < height; y++) {
+                let yItems = [];
+                for (let x = 0; x < width; x++) {
+                    yItems.push(null);
+                }
+                this.grid.push(yItems);
+            }
+        }
+    }
+
+    getCoordValue(y, x) {
+        if (isNaN(parseInt(y)) || isNaN(parseInt(x))) {
+            throw Error('y or x NaN. Tried to get coordinate value.');
+        }
+
+        return this.grid[y][x]
+    }
+
+    setCoordValue(y, x, value) {
+        if (isNaN(parseInt(y)) || isNaN(parseInt(x))) {
+            throw Error('y or x NaN. Tried to set coordinate value.');
+        }
+
+        this.grid[y][x] = value;
+    }
+
+
+
+}
+
+
+module.exports = { Graph, Stack, Queue, PriorityQueue, Grid }

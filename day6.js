@@ -12,7 +12,7 @@ Distance:  9  40  200`;
     await input.getInput();
     let lines = input.split("\n", false);
     console.log(`Part One: ${partOne(lines)}`);
-    console.log(`Part One: ${partTwo(lines)}`);
+    console.log(`Part Two: ${partTwo(lines)}`);
 })();
 
 function partOne(lines) {
