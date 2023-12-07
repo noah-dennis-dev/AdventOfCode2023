@@ -97,7 +97,12 @@ function partTwo(lines) {
         return items;
     }
 
-    function getMaxScore(hand) {
+    function getHandScore(hand) {
+        let handMap = [];
+        for (let char of hand) {
+            handMap.push(map[char] || char);
+        }
+
         let maxScore = Number.NEGATIVE_INFINITY;
 
         for (let el of getReplacements(hand)) {
@@ -107,16 +112,7 @@ function partTwo(lines) {
             }
         }
 
-        return maxScore;
-    }
-
-    function getHandScore(hand) {
-        let handMap = [];
-        for (let char of hand) {
-            handMap.push(map[char] || char);
-        }
-
-        return [getMaxScore(hand), handMap]
+        return [maxScore, handMap]
     }
 
     let total = 0;
