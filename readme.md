@@ -14,8 +14,8 @@ I am using some prewritten code such as pulling the input from the input endpoin
 | [7](day7.js) | 🟡 | Fairly nice problem today but just took a while as there were many rules. |
 | [8](day8.js) | 🟢 | Part 1 was very nice and quick to find a solution. Part 2 took a bit longer but by knowing to use LCM you could find it. (I may have used google sheets to find the LCM as I wasn't a fan of programming efficiently in the time). |
 | [9](day9.js) | 🟢 | Good problem but easy to solve! I was expecting more of a twist for part 2. |
-| [10](day10.js) | ⚫ | - |
-| [11](day11.js) | ⚫ | - |
+| [10](day10.js) | 🔴 | Pretty hard... haven't finished part 2 yet but I know what I need to do. |
+| [11](day11.js) | 🟢 | Pretty easy. Nice twist for part 2. |
 | [12](day12.js) | ⚫ | - |
 | [13](day13.js) | ⚫ | - |
 | [14](day14.js) | ⚫ | - |

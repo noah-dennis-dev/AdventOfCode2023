@@ -12,40 +12,35 @@ class Dijkstras {
         this.nodeConnections[startNode].finalDistanceFound = true;
         this.nodeConnections[startNode].distance = 0;
 
-        return this.dijkstrasLoop(startNode)
-    }
+        let priorityQueue = [{ node: startNode, distance: 0 }];
 
-    dijkstrasLoop(node) {
-        const neighbours = this.graph.getNeighbours(node)
-        let currentNodeDistance = this.nodeConnections[node].distance;
-        for (let neighbour of neighbours) {
-            if (this.nodeConnections[neighbour].finalDistanceFound !== true) {
-                let neighbourDistance = this.graph.getEdgeValue(node, neighbour);
-                if (this.nodeConnections[neighbour].distance == -1 || neighbourDistance + currentNodeDistance < this.nodeConnections[neighbour].distance) {
-                    this.nodeConnections[neighbour].distance = neighbourDistance + currentNodeDistance;
-                    this.nodeConnections[neighbour].prev = node;
+        while (priorityQueue.length > 0) {
+            priorityQueue.sort((a, b) => a.distance - b.distance);
+            let currentNodeObj = priorityQueue.shift();
+            let node = currentNodeObj.node;
+            let currentNodeDistance = currentNodeObj.distance;
+
+            const neighbours = this.graph.getNeighbours(node);
+
+            for (let neighbour of neighbours) {
+                if (this.nodeConnections[neighbour].finalDistanceFound !== true) {
+                    let neighbourDistance = this.graph.getEdgeValue(node, neighbour);
+                    if (
+                        this.nodeConnections[neighbour].distance == -1 ||
+                        neighbourDistance + currentNodeDistance < this.nodeConnections[neighbour].distance
+                    ) {
+                        this.nodeConnections[neighbour].distance = neighbourDistance + currentNodeDistance;
+                        this.nodeConnections[neighbour].prev = node;
+
+                        priorityQueue.push({ node: neighbour, distance: this.nodeConnections[neighbour].distance });
+                    }
                 }
             }
+
+            this.nodeConnections[node].finalDistanceFound = true;
         }
 
-        let nextNode;
-        let lowestDistance = Infinity;
-        for (let possibleNextNode of this.graph.nodes) {
-            let connection = this.nodeConnections[possibleNextNode];
-            if (connection.finalDistanceFound !== true) {
-                if (connection.distance < lowestDistance && connection.distance !== -1) {
-                    lowestDistance = connection.distance;
-                    nextNode = possibleNextNode;
-                }
-            }
-        }
-
-        if (nextNode !== undefined) {
-            this.nodeConnections[nextNode].finalDistanceFound = true;
-            return this.dijkstrasLoop(nextNode);
-        } else {
-            return this.nodeConnections;
-        }
+        return this.nodeConnections;
     }
 }
 

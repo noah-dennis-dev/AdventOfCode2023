@@ -162,7 +162,7 @@ class PriorityQueue extends Queue {
     }
 
     dequeue() {
-        return super.dequeue().value;
+        return super.dequeue();
     }
 
     peek() {
@@ -203,9 +203,6 @@ class Grid {
 
         this.grid[y][x] = value;
     }
-
-
-
 }
 
 
